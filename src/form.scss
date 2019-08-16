@@ -1,0 +1,100 @@
+.content-page-wrapper {
+    width: 70vw;//we will have 2 columns spread between 100% size of the view width
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+
+    .right-column {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding: 100px;
+
+            .form{
+                display: grid;
+                justify-content: center;
+                align-content: center;
+                
+                //opacity: 0.6;
+                
+                .form-group {
+                    margin-bottom: 30px;
+                    margin-top: 30px;
+                    
+                }
+
+                input {
+                    font-size: 1.5rem;
+                    /*rem gives access to the root value but
+                    em takes as source the previous value not original*/
+                    font-family: inherit;
+                    /*Inherit last value*/
+                    color: inherit;
+                    padding: 1.5rem 2rem;
+                    /*incrementing the root padding by default*/
+                    border-radius: 2px;
+                    border: none; /*By default it has grey border around all the form*/
+                    /*it needs to go before customizin the bottom border*/
+                    border-bottom: 3px solid #cea135;//#11122b;
+                    width: 100%;
+                    display: block;
+                    transition: all 0.3s;
+
+                // background-color: transparent;
+
+                    &:focus {
+                        outline: none;
+                        box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1);
+                        border-bottom: 3px solid #8A180E;
+                    }
+                }
+
+                textarea {
+                    margin-top: 20px;
+                    width: 100%;
+                    height: 250px;
+                    border-radius: 3px;
+                    border: 3px solid #cea135;//#11122b;
+                    font-size: 1.5rem;
+                    font-family: inherit;
+                    color: inherit;
+                    padding:1.5rem 2rem;
+                    transition: all 0.3s;
+                // background-color: transparent;
+
+                    &:focus {
+                        outline: none;
+                        box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1);
+                        border: 3px solid #8A180E;
+                    }
+                }
+
+                input::-webkit-input-placeholder, .form textarea::-webkit-input-placeholder {
+                    color: #11122b;
+                }
+
+                input:focus::-webkit-input-placeholder, .form textarea:focus::-webkit-input-placeholder {
+                    color: transparent;
+                }
+
+                label {
+                    font-size: 1.2rem;
+                    font-weight: 700;
+                    margin-left: 2rem;
+                    margin-top: 0.7rem;
+                    display: block;/*to treat the label as div*/
+                    transition: all 0.3s;
+                    color: #8A180E;
+                //  visibility: hidden;
+                //    opacity: 0;/*transparency*/
+                
+                }
+
+                input:focus + label, .form textarea:focus + label {
+                    opacity: 1;
+                    visibility: visible;
+                    transform: translateY(1rem); /*moving down one value from original in the Y axis*/
+                }
+            }
+        }
+    }

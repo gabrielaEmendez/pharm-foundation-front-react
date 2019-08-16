@@ -28,8 +28,6 @@ const Home = () => {
         Must not have an annual income exceeding $120000.00 ($10000.00 per
         month).
         <br />
-        To apply, please go to www.glucobasalfoundation.com
-        <br />
         Thank you for visiting us!!
       </p>
     </div>
