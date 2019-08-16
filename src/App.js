@@ -6,8 +6,9 @@ import Home from "./components/pages/Home";
 import About from "./components/pages/About";
 import Register from "./components/auth/Register";
 import Login from "./components/auth/Login";
+import FormPage from "./components/pages/form-page";
 
-import "./App.css";
+import "./App.scss";
 
 const App = () => {
   return (
@@ -20,6 +21,7 @@ const App = () => {
             <Route exact path="/about" component={About} />
             <Route exact path="/register" component={Register} />
             <Route exact path="/login" component={Login} />
+            <Route exact path="/form" component={FormPage} />
           </Switch>
         </div>
       </Fragment>
